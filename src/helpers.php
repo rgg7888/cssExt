@@ -22,6 +22,6 @@ if(!function_exists('sye')) {
 
 if(!function_exists('css')) {
     function css (array $selectores_propiedades) {
-        return style($selectores_propiedades);
+        return style($selectores_propiedades,['type'=>'text/css']);
     }
 }
