@@ -18,7 +18,7 @@
 <p>
     tambien cuenta con unas habilidades especiales
     que te permiten crear serie de selectores y
-    patrones de los mismo.
+    patrones de los mismos.
 </p>
 
 <p>
