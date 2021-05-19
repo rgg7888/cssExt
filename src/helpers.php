@@ -25,3 +25,11 @@ if(!function_exists('css')) {
         return style($selectores_propiedades,['type'=>'text/css']);
     }
 }
+
+if(!function_exists('addCss')) {
+    function addCss (array $css) {
+        $cssObject = App\css\Css::instancia();
+        $cssObject->setCss($css);
+        return $cssObject->insertStyle($cssObject->getCss());
+    }
+}
