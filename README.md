@@ -125,7 +125,7 @@ sye([
 <pre>
 media([
     '480' => [
-        '.brand' => ''background: #cbb09c !important;''
+        '.brand' => 'background: #cbb09c !important;'
     ]
 ]);
 </pre>
