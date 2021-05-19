@@ -96,3 +96,86 @@ sye([
     'lightcyan'
 ],".element",10,true)
 </pre>
+
+<h2>@Media Queries</h2>
+
+<p>
+    para los media queries tenemos la funcion media()
+    esta funcion recibe un array por arguento.
+</p>
+
+<p>
+    Toma en cuenta que esta funcion 
+    puede crear solamente 3 breakpoints
+    diferentes. 480px , 768px y 1024px.
+    <br>
+    <br>
+    Tambien es posible crear estilos para
+    selectores pero el formato es mas manual
+    respecto a las propiedades y sus valores
+</p> 
+
+<h2>Ejemplo de uso</h2>
+
+<p>
+    Supongamos que queremos crear un break point 
+    de 480px y agregarle selectores y sus propiedades css.
+</p>
+
+<pre>
+media([
+    '480' => [
+        '.brand' => ''background: #cbb09c !important;''
+    ]
+]);
+</pre>
+
+<p>
+Con lo anterior se creara el media querie 
+y en su interior los estilos que queramos
+aplicar a pantallas con un ancho de no mas 
+de 480px. Tambien es posible agregar multiples 
+break poins a la vez.
+</p>
+
+<pre>
+media([
+    '480' => [
+        '.brand' => 'background: #cbb09c !important;'
+    ],
+    '780' => [
+        '.brand-text' => 'color: #cbb09c !important;'
+    ],
+    '1024' => [
+        'form' => [
+            "max-width: 460px;",
+            "margin: 20px auto;",
+            "padding: 20px;"
+        ]
+    ]
+]);
+</pre>
+
+<p>
+    finalmente si solo queremos 
+    crear los estilos para los selectores
+    simplemente no le agregamos el break point
+    a el arreglo y le pasamos los selectore
+    y propiedades directamente asi :
+</p>
+
+<pre>
+media([
+    ".brand" => [
+                "background: #cbb09c !important;"
+    ],
+    ".brand-text" => [
+        "color: #cbb09c !important;"
+    ],
+    "form" => [
+        "max-width: 460px;",
+        "margin: 20px auto;",
+        "padding: 20px;"
+    ]
+]);
+</pre>
