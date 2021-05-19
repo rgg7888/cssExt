@@ -26,8 +26,8 @@ if(!function_exists('css')) {
     }
 }
 
-if(!function_exists('addCss')) {
-    function addCss (array $css) {
+if(!function_exists('media')) {
+    function media (array $css) {
         $cssObject = App\css\Css::instancia();
         $cssObject->setCss($css);
         return $cssObject->insertStyle($cssObject->getCss());
